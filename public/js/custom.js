@@ -6,14 +6,14 @@
         let nama_rek_bank = $(this).val();
         let no_rek = '';
         switch (nama_rek_bank) {
-            case "BRI":
-                no_rek = "0504.0100.0239.300";
+            case "sulselbar":
+                no_rek = "050-202-0000002735-2";
                 break;
-            case "BCA":
-                no_rek = "686.0148.755";
+            case "sulselbarsyariah":
+                no_rek = "538-261-000000003-2";
                 break;
-            case "MANDIRI":
-                no_rek = "0700.0018.555.55";
+            case "bsi":
+                no_rek = "1024715643";
                 break;
         }
         $('#no_rek_bank').val(no_rek);

@@ -131,6 +131,9 @@
                       <option value="BRI">BRI</option>
                       <option value="BCA">BCA</option>
                       <option value="MANDIRI">MANDIRI</option>
+                      <option value="MANDIRI">Sulselbar</option>
+                      <option value="MANDIRI">Sulselbar Syariah</option>
+                      <option value="MANDIRI">BSI</option>
                     </select>
                   </div>
                 </div>
@@ -141,9 +144,9 @@
                   <div class="form-group">
                     <label for="nama_rek_bank">Bank Tujuan</label>
                     <select name="nama_rek_bank" class="form-control" id="nama_rek_bank" required>
-                      <option value="BRI">BRI</option>
-                      <option value="BCA">BCA</option>
-                      <option value="MANDIRI">MANDIRI</option>
+                      <option value="sulselbar">Sulselbar</option>
+                      <option value="sulselbarsyariah">Sulselbar Syariah</option>
+                      <option value="bsi">BSI</option>
                     </select>
                   </div>
                 </div>
@@ -151,7 +154,7 @@
                   <div class="form-group">
                     <label for="no_rek_bank">Bank Tujuan</label>
                     <input name="no_rek_bank" type="text" class="form-control" id="no_rek_bank"
-                      placeholder="Nomor Rekening Tujuan" readonly value="0504.0100.0239.300" required>
+                      placeholder="Nomor Rekening Tujuan" readonly value="050-202-0000002735-2" required>
                   </div>
                 </div>
               </div>
@@ -218,31 +221,31 @@
             <tbody>
               <tr>
                 <td class="tab-no"><b>1.</b></td>
-                <td style="text-align: center;"><a target="_blank" href="https://ib.bri.co.id/ib-bri/"><img
-                      class="img-bank" src="https://baznas.go.id/application/views/assets/images/rek/bri.png"></a></td>
-                <td style="text-align: center;"><span class="norek"><b>0504.0100.0239.300</b></span></td>
+                <td style="text-align: center;"><a target="_blank" href="https://banksulselbar.co.id/"><img
+                      class="img-bank" src="img/sulselbar.png"></a></td>
+                <td style="text-align: center;"><span class="norek"><b>050-202-0000002735-2</b></span></td>
                 <td style="text-align: center;"><i title="Salin nomor rekening"
                     class="fa fa-copy text-theme-colored btn-xl btn btn-colored"
-                    onclick="getBaznasRekening('050401000239300');return false;"></i></td>
+                    onclick="getBaznasRekening('050-202-0000002735-2');return false;"></i></td>
               </tr>
               <tr>
                 <td class="tab-no"><b>2.</b></td>
-                <td style="text-align: center;"> <a target="_blank" href="https://ibank.klikbca.com/"><img
-                      class="img-bank" src="https://baznas.go.id/application/views/assets/images/rek/bca.png"></a></td>
-                <td style="text-align: center;"><span class="norek"><b>686.0148.755</b></span></td>
+                <td style="text-align: center;"> <a target="_blank" href="https://banksulselbar.co.id/"><img
+                      class="img-bank" src="img/sulselbarsyariah.png"></a></td>
+                <td style="text-align: center;"><span class="norek"><b>538-261-000000003-2</b></span></td>
                 <td style="text-align: center;"><i title="Salin nomor rekening"
                     class="fa fa-copy text-theme-colored btn-xl btn btn-colored"
-                    onclick="getBaznasRekening('6860148755');return false;"></i></td>
+                    onclick="getBaznasRekening('538-261-000000003-2');return false;"></i></td>
               </tr>
               <tr>
                 <td class="tab-no"><b>3.</b></td>
                 <td style="text-align: center;"><a target="_blank"
-                    href="https://ib.bankmandiri.co.id/retail/Login.do?action=form&amp;lang=in_ID"><img class="img-bank"
-                      src="https://baznas.go.id/application/views/assets/images/rek/mandiri.png"></a></td>
-                <td style="text-align: center;"><span class="norek"><b>0700.0018.555.55</b></span></td>
+                    href="https://www.bankbsi.co.id/"><img class="img-bank"
+                      src="img/bsi.png"></a></td>
+                <td style="text-align: center;"><span class="norek"><b>1024715643</b></span></td>
                 <td style="text-align: center;"><i title="Salin nomor rekening"
                     class="fa fa-copy text-theme-colored btn-xl btn btn-colored"
-                    onclick="getBaznasRekening('0700001855555');return false;"></i></td>
+                    onclick="getBaznasRekening('1024715643');return false;"></i></td>
               </tr>
             </tbody>
           </table>
