@@ -6,12 +6,17 @@ use App\Models\Konfirmasi;
 use App\Models\Pembayaran;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KonfirmasiController extends Controller
 {
     public function index()
     {
-        $data = Pembayaran::orderBy('id', 'DESC')->has('konfirmasi', 'status')->get();
+        $data = DB::table('pembayarans')
+        ->leftJoin('konfirmasis', 'pembayarans.id', '=', 'konfirmasis.pembayaran_id')
+        ->where('status', '=', null)
+        ->select('pembayarans.*')
+        ->get();
         // dd($data);
         if (request()->ajax()) {
             return datatables()->of($data)->make(true);
@@ -25,9 +30,10 @@ class KonfirmasiController extends Controller
     public function statusReject()
     {
 
-        $data = Pembayaran::orderBy('id', 'DESC')->whereHas('konfirmasi', function ($q) {
-            $q->where('status', '=', 'reject');
-        })->with('konfirmasi')->get();
+        $data = DB::table('pembayarans')
+        ->join('konfirmasis', 'pembayarans.id', '=', 'konfirmasis.pembayaran_id')
+        ->where('status', '=', 'reject')
+        ->get();
         // dd($data);
         if (request()->ajax()) {
             return datatables()->of($data)->make(true);
@@ -36,9 +42,10 @@ class KonfirmasiController extends Controller
     public function statusConfirm()
     {
 
-        $data = Pembayaran::orderBy('id', 'DESC')->whereHas('konfirmasi', function ($q) {
-            $q->where('status', '=', 'confirm');
-        })->with('konfirmasi')->get();
+        $data = DB::table('pembayarans')
+        ->join('konfirmasis', 'pembayarans.id', '=', 'konfirmasis.pembayaran_id')
+        ->where('status', '=', 'confirm')
+        ->get();
         // dd($data);
         if (request()->ajax()) {
             return datatables()->of($data)->make(true);

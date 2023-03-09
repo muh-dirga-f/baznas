@@ -191,8 +191,8 @@
         {
           data: null,
           render: function(data, type, row, meta) {
-            let konfirmasiStatus = (row.konfirmasi) ? row.konfirmasi.status : "pending";
-            // console.log(konfirmasiStatus);
+            let konfirmasiStatus = (row.status) ? row.status : "pending";
+            console.log(row.status);
             let status;
             switch (konfirmasiStatus) {
               case "pending":
@@ -297,7 +297,7 @@
         formData.append('_token', '{{ csrf_token() }}');
         formData.append('pembayaran_id', id);
         formData.append('status', 'confirm');
-        // console.log(...formData);
+        console.log(...formData);
         Swal.fire({
           title: 'Apa anda yakin mengkonfirmasi?',
           html: sweetAlertDetailPengirim(row),
